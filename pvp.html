@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG PvP Battle Game</title>
+    <link rel="stylesheet" href="pvp-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ RNG PvP Battle Arena ⚔️</h1>
+
+        <!-- Game Mode Selection -->
+        <div id="modeSelection" class="mode-selection">
+            <h2>Select Game Mode</h2>
+            <button class="mode-btn" onclick="startSinglePlayer()">🤖 VS Computer</button>
+            <button class="mode-btn" onclick="startMultiplayer()">👥 Local Multiplayer</button>
+        </div>
+
+        <!-- Main Game Area -->
+        <div id="gameArea" class="game-area" style="display: none;">
+            <!-- Player 1 -->
+            <div class="player-section player1">
+                <div class="player-name" id="p1Name">Player 1</div>
+                <div class="health-bar">
+                    <div class="health-fill" id="p1Health" style="width: 100%"></div>
+                </div>
+                <div class="health-text" id="p1HealthText">100 / 100</div>
+                <div class="stats">
+                    <p>Last Roll: <span id="p1LastRoll">-</span></p>
+                    <p>Damage: <span id="p1Damage">0</span></p>
+                </div>
+            </div>
+
+            <!-- VS -->
+            <div class="vs-area">
+                <div class="turn-info">
+                    <div id="turnDisplay">Player 1's Turn</div>
+                    <div id="messageBox"></div>
+                </div>
+            </div>
+
+            <!-- Player 2 -->
+            <div class="player-section player2">
+                <div class="player-name" id="p2Name">Player 2</div>
+                <div class="health-bar">
+                    <div class="health-fill" id="p2Health" style="width: 100%"></div>
+                </div>
+                <div class="health-text" id="p2HealthText">100 / 100</div>
+                <div class="stats">
+                    <p>Last Roll: <span id="p2LastRoll">-</span></p>
+                    <p>Damage: <span id="p2Damage">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div id="controlPanel" class="control-panel" style="display: none;">
+            <button class="action-btn" onclick="rollDice()">🎲 Roll Dice (1-20)</button>
+            <button class="action-btn" onclick="useSpecialAttack()">⚡ Special Attack (1-30)</button>
+            <button class="action-btn" onclick="defend()">🛡️ Defend</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="game-over-screen" style="display: none;">
+            <div class="game-over-content">
+                <h2 id="winnerText"></h2>
+                <p id="finalStats"></p>
+                <button class="restart-btn" onclick="restartGame()">🔄 Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pvp-script.js"></script>
+</body>
+</html>
