@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Clock - Multiple Time Zones</h1>
+        
+        <div class="clock-grid">
+            <!-- New York -->
+            <div class="clock-card">
+                <h2>New York</h2>
+                <div class="timezone-info">EST/EDT</div>
+                <div class="digital-clock" id="clock-ny">00:00:00</div>
+            </div>
+
+            <!-- London -->
+            <div class="clock-card">
+                <h2>London</h2>
+                <div class="timezone-info">GMT/BST</div>
+                <div class="digital-clock" id="clock-london">00:00:00</div>
+            </div>
+
+            <!-- Tokyo -->
+            <div class="clock-card">
+                <h2>Tokyo</h2>
+                <div class="timezone-info">JST</div>
+                <div class="digital-clock" id="clock-tokyo">00:00:00</div>
+            </div>
+
+            <!-- Sydney -->
+            <div class="clock-card">
+                <h2>Sydney</h2>
+                <div class="timezone-info">AEDT/AEST</div>
+                <div class="digital-clock" id="clock-sydney">00:00:00</div>
+            </div>
+
+            <!-- Dubai -->
+            <div class="clock-card">
+                <h2>Dubai</h2>
+                <div class="timezone-info">GST</div>
+                <div class="digital-clock" id="clock-dubai">00:00:00</div>
+            </div>
+
+            <!-- Los Angeles -->
+            <div class="clock-card">
+                <h2>Los Angeles</h2>
+                <div class="timezone-info">PST/PDT</div>
+                <div class="digital-clock" id="clock-la">00:00:00</div>
+            </div>
+        </div>
+
+        <div class="local-time">
+            <p>Your Local Time:</p>
+            <div class="local-clock" id="local-clock">00:00:00</div>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
